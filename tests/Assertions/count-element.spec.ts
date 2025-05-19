@@ -1,7 +1,7 @@
 import{test,expect} from'@playwright/test';
 import { TIMEOUT } from 'dns';
 test('Login page element count assertions',async({page})=>{
-    //Navigate to platform-qa env
+    //Navigate to platform-qa environment
     await page.goto("https://platform-qa.terradotta.com/");
     await (page.locator("//h1[normalize-space()='Login to TD Enterprise Platform']")).waitFor({timeout:30000})
     await expect (page.locator("//h1[normalize-space()='Login to TD Enterprise Platform']")).toBeVisible();
